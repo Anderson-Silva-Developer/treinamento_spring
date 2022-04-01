@@ -2,9 +2,10 @@ package com.anderson.spring_treinamento.notificacao;
 
 
 import com.anderson.spring_treinamento.entities.Cliente;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
+@Profile("prod")
 @TipoDoNotificador(NivelUrgencia.NORMAL)
 @Component
 public class NotificadorEmail implements Notificador{
