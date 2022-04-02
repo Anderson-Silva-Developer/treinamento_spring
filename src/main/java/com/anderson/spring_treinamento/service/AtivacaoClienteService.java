@@ -8,12 +8,24 @@ import com.anderson.spring_treinamento.notificacao.TipoDoNotificador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
-@Component
+
+//@Component
 public class AtivacaoClienteService {
     @TipoDoNotificador(NivelUrgencia.NORMAL)
     @Autowired
     private Notificador notificador;
+
+//    @PostConstruct
+    public  void init(){
+        System.out.println("INIT"+notificador);
+    }
+//    @PreDestroy
+    public  void destroy(){
+        System.out.println("INIT"+notificador);
+    }
 
     public void ativar(Cliente cliente){
         cliente.Ativar();
