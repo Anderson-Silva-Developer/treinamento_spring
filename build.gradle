@@ -17,6 +17,9 @@ configurations {
 }
 
 dependencies {
+
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.5'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
